@@ -637,7 +637,7 @@ class WC_Shortcode_Products {
 				)
 			);
 
-			$original_post = $GLOBALS['post'];
+			$original_post = isset( $GLOBALS['post'] ) ? $GLOBALS['post'] : null;
 
 			do_action( "woocommerce_shortcode_before_{$this->type}_loop", $this->attributes );
 
